@@ -31,11 +31,4 @@ pipeline{
 		}
 	}
 
-	post {
-		always {
-			sh 'docker logout'
-		}
-	}
-
 }
-view rawJenkinsfile hosted with ❤ by GitHub
