@@ -34,7 +34,7 @@ pipeline{
 		  steps {
 		    withAWS(region:'ap-south-1',credentials:'jenkins-aws-cred') {
 		    s3Delete(bucket: 'elasticbeanstalk-ap-south-1-116002743124', path:'**/*')
-		    s3Upload(bucket: 'elasticbeanstalk-ap-south-1-116002743124', workingDir:'build', includePathPattern:'**/*');
+		    s3Upload(bucket: 'elasticbeanstalk-ap-south-1-116002743124', includePathPattern:'**/*');
 		  	}
 		  }
     }
